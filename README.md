@@ -1,5 +1,5 @@
 # 📊 F&B Operational Cost Control & Menu Profitability Optimization Framework
-**Author:** [Your Name]  
+**Author:**
 **Domain Expertise:** Banquet Operations, Kitchen Operations, and F&B Cost Control  
 
 ---
