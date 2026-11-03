@@ -1,53 +1,137 @@
-# 📊 F&B Operational Cost Control & Menu Profitability Optimization Framework
-**Author:**
-**Domain Expertise:** Banquet Operations, Kitchen Operations, and F&B Cost Control  
+# 📊 Data-Driven F&B Operational Cost Control & Menu Engineering Analytics
+
+![SQL](https://shields.io)
+![Excel](https://shields.io)
+![Analytics](https://shields.io)
+![Business Intelligence](https://shields.io)
+
+An end-to-end operational analytics case study that bridges raw commercial kitchen inventory data with automated database engineering to maximize profitability and mitigate financial leaks within a full-service hotel Food & Beverage (F&B) ecosystem.
 
 ---
 
-## 📌 1. Executive Business Case Study (The Management Thesis)
-
-### Executive Summary
-This corporate-level case study addresses a direct operational challenge in high-volume hospitality and hotel banquet management: profit margin erosion caused by unmonitored kitchen production food waste. By establishing a dual-layered data pipeline across SQL and Excel, this initiative successfully isolates hidden financial leakages and provides the executive leadership team with automated menu engineering decisions to protect and reclaim gross profit margins.
-
-### Problem Statement
-In large-scale kitchen and banquet environments, food cost control is traditionally managed through manual, reactive ledger checks rather than live data analysis.
-* **Production Disconnect:** Kitchen production teams frequently over-prepare buffer portions due to a lack of historic batch-control data, directly resulting in massive material wastage.
-* **The High-Volume Illusion:** Low unit-cost items (e.g., soups and desserts) mask substantial cumulative financial losses, creating hidden operational leakages that quietly erode monthly gross profit margins.
-
-### Management Methodology & Benchmark Metrics
-Using a standardized operational database of core banquet menu items, a 3-sheet automated logic framework was built based on two primary management benchmarks: **Food Cost Percentage** (Target Benchmark: ≤ 35%) and **Waste Ratio Percentage** (Target Benchmark: ≤ 15%). 
-
-Through this analytical engine, menu items are dynamically classified into four corporate action quadrants:
-* **⭐ STARS (Low Cost, Low Waste):** Highly efficient items (e.g., *Authentic Beef Rendang*) that maintain peak profitability. *Strategy: Maintain & Feature Prominently.*
-* **🐎 PLOWHORSES (High Cost, Low Waste):** Popular items with high raw material costs (e.g., *Pan Seared Atlantic Salmon*). *Strategy: Review Portion Sizing or Adjust Pricing.*
-* **🧩 PUZZLES (Low Cost, High Waste):** High financial leakage isolated in appetizers/soups (e.g., *Creamy Wild Mushroom Soup*). *Strategy: Target for Production Batch-Control and Staff Training.*
-* **🐕 DOGS (High Cost, High Waste):** Highly inefficient items that actively drain business cash flow. *Strategy: Remove from Menu or Completely Redesign Recipes.*
+## 📑 Project Documentation
+The complete, comprehensive 20-page academic-style mini-thesis documenting the full research methodology, data pre-processing protocols, mathematical derivations, and root-cause analysis can be accessed directly here:
+👉 **[View Full Operations Thesis Documentation (PDF)](./FB_Cost_Control_Mini_Thesis.pdf)** *(Ensure you upload your exported PDF to the root directory)*
 
 ---
 
-## 🛠️ 2. Data Infrastructure & System Architecture (The Technical Lens)
+## 🚀 Business Problem & Core Insights
+Large-scale hotel culinary operations routinely battle tight profit margins due to fluctuating raw ingredient inflation and **over-production waste**. This project isolates a baseline profit leakage of **RM5,143.30** out of an operational prepared baseline of **RM27,646.00**, representing an immediate **18.6% deduction from the gross profit margin**.
 
-This project utilizes an integrated data pipeline combining database querying (SQL) for extraction and dynamic business modeling (Excel) for reporting.
+By deploying automated relational querying, this project transforms historical inventory records into a dynamic **Kasavana & Smith Menu Engineering Matrix**, classifying **35 items** across 4 core quadrants:
 
-### Phase 1: Database Querying & Extraction (SQL)
-Before building the analytical reporting model, a relational database environment was queried to extract raw banquet transactions. The core script (`01_waste_analysis_query.sql`) aggregates data using clean, standard SQL infrastructure:
-* **`SUM` & `GROUP BY`:** Applied to aggregate multiple event transactional rows into clean, distinct menu summaries.
-* **`WHERE` filtering:** Isolated specific high-volume operational events (`WHERE Event_Type = 'Banquet'`) to clean the data scope.
-* **`ORDER BY` optimization:** Sorted rows by the highest financial leakage (`DESC`) to immediately surface the worst-performing operational items for management review.
+```text
+       HIGH POPULARITY
+              ▲
+              │       PLOWHORSE       │          STAR
+              │  (High Vol / Low % )  │  ( High Vol / High % )
+              │                       │
+LOW MARGIN ───┼───────────────────────┼───────────────────────► HIGH MARGIN
+              │                       │
+              │          DOG          │         PUZZLE
+              │   (Low Vol / Low % )  │  ( Low Vol / High % )
+              │                       │
+              ▼
+        LOW POPULARITY
+```
 
-### Phase 2: Integrated Excel Analytical Modeling (Corporate Navy Theme)
-The extracted database rows were mapped across 3 continuous automated sheets without manual data redundancy, formatted cleanly using the premium `Segoe UI` typography with hidden gridlines for an application-style finish:
-
-1. **`1 Raw Data`:** Standardized horizontal operational repository capturing event IDs, volumes prepared vs. wasted, unit costs, and retail margins using professional *Zebra Striping* for high readability.
-2. **`2 Cost Calculation`:** Robust automated financial engine utilizing advanced `SUMIFS` data aggregation combined with `IFERROR` validation metrics to eliminate divide-by-zero faults. Includes a dedicated executive summary **TOTAL** row highlighted in *Ice Blue* with accounting-style double underlines.
-3. **`3 Menu Engineering`:** A dynamic decision matrix driven by multi-tier `Nested IF` and `AND` logic to automatically output the final business strategies (*Maintain, Adjust Price, Reduce Waste, Remove Item*) backed by pastel-coded *Conditional Formatting* to draw direct management attention to target areas.
-
-### 📊 Executive Dashboard Preview
-Here is the visual overview of the interactive executive dashboard built using Pivot Tables and customized slicers:
-![Corporate F&B Dashboard](dashboard_preview.png)
+### 💡 Core Operational Findings:
+* **The Puzzle Monopoly (52% of Menu):** Over half of the hotel’s active dishes generate exceptional profit margins but suffer from slow sales velocity. Specialized fresh ingredients sit in storage, spoiling over time and directly driving the **RM5,143.30 waste footprint**.
+* **The Plowhorse Volatility (37% of Menu):** Foundational volume drivers (heavily dominated by the beverage sector like *Iced Calamansi Lime Tea* with **>400 portions sold**) pull significant transaction volume but carry unfavorable food cost margins, making them highly sensitive to price changes.
+* **The Star Anchor (11% of Menu):** Premium high-performing items like *Royal Saffron Rice* and *Honey Spiced Tomato Chicken* successfully achieve high market velocity while keeping food costs safely under the target **35% threshold**.
 
 ---
 
-## 💡 3. Key Strategic Insights & Next Steps
-1. **Bridging the Disconnect:** Automating the `Menu Classification` column bridges the gap between kitchen staff and financial management, turning raw transactional rows into immediate, strategic boardroom decisions.
-2. **Variance Containment:** The data proves that reducing the variance in over-preparation via historical SQL queries is the fastest way to stabilize fluctuating food cost percentages before profit erosion impacts quarterly financial reviews.
+## 🗺️ Data Pipeline & Architecture
+The project structure is engineered around a continuous, three-tiered business intelligence architecture:
+
+```text
+┌─────────────────────────────────┐      ┌─────────────────────────────────┐      ┌─────────────────────────────────┐
+│     1. INPUT & STAGING          │      │    2. PROCESSING & AUTOMATION   │      │      3. VISUAL OUTPUT           │
+│     (Microsoft Excel)           │      │        (MySQL Database)         │      │     (Executive Dashboard)       │
+├─────────────────────────────────┤      ├─────────────────────────────────┤      ├─────────────────────────────────┤
+│ • Tab 1: Raw Material Logs      │      │ • Data Cleaning & Alignment     │      │ • Menu Engineering Breakdown    │
+│ • Tab 2: Cost Calculation Sheets│ ───► │ • Complex Conditional Aggregates│ ───► │   (Donut Chart Analysis)        │
+│ • Tab 3: Manual Menu Matrices   │      │ • CTE Threshold Classification  │      │ • Top 10 Best Sellers Profiling │
+└─────────────────────────────────┘      └─────────────────────────────────┘      └─────────────────────────────────┘
+```
+
+---
+
+## 💻 SQL Logic & Implementation
+The core transformation engine utilizes advanced conditional structures and **Common Table Expressions (CTEs)** within a MySQL environment. It programmatically calculates itemized variables and isolates performance strategy alignments without manual spreadsheet audits.
+
+### Threshold Parameters Set:
+* **High Popularity Index:** Total Volume Sold (`qty_prepared - qty_waste`) \(\ge\) `200 portions`.
+* **High Profitability Index:** Net Consumed Food Cost Percentage \(\le\) `35.00%`.
+
+```sql
+WITH menu_metrics AS (
+    SELECT 
+        item_id,
+        menu_item,
+        (qty_prepared - qty_waste) AS qty_sold,
+        ((qty_prepared - qty_waste) * unit_cost) AS consumed_food_cost,
+        ROUND(((qty_prepared - qty_waste) * 
+            CASE 
+                WHEN item_id = 'B001' THEN 8.33
+                WHEN item_id = 'B002' THEN 10.67
+                WHEN item_id = 'B003' THEN 9.85
+                WHEN item_id = 'B004' THEN 8.25
+                WHEN item_id = 'B005' THEN 15.00
+                ELSE 10.00
+            END), 2) AS total_revenue
+    FROM menu_raw_inventory
+),
+menu_percentages AS (
+    SELECT 
+        item_id,
+        menu_item,
+        qty_sold,
+        ROUND((consumed_food_cost / total_revenue) * 100, 2) AS food_cost_percentage
+    FROM menu_metrics
+)
+SELECT 
+    item_id,
+    menu_item,
+    qty_sold,
+    food_cost_percentage,
+    CASE 
+        WHEN qty_sold >= 200 AND food_cost_percentage <= 35.00 THEN 'STAR'
+        WHEN qty_sold >= 200 AND food_cost_percentage > 35.00 THEN 'PLOWHORSE'
+        WHEN qty_sold < 200 AND food_cost_percentage <= 35.00 THEN 'PUZZLE'
+        ELSE 'DOG'
+    END AS menu_classification,
+    CASE 
+        WHEN qty_sold >= 200 AND food_cost_percentage <= 35.00 THEN 'Maintain'
+        WHEN qty_sold >= 200 AND food_cost_percentage > 35.00 THEN 'Review Pricing / Reduce Portion'
+        WHEN qty_sold < 200 AND food_cost_percentage <= 35.00 THEN 'Reduce Waste'
+        ELSE 'Remove Item'
+    END AS management_strategy
+FROM menu_percentages;
+```
+
+---
+
+## 📈 Strategic Management Action Plan
+To translate database metrics into actual profit recovery, the project implements a prescriptive operational framework:
+
+1. **Puzzle Intervention:** Transition high-cost slow movers (e.g., *Pan Seared Atlantic Salmon*) away from bulk advance preparation into vacuum-sealed sous-vide, cook-to-order protocols to extend ingredient shelf-life and safely eliminate the wastage footprint.
+2. **Plowhorse Engineering:** Apply subtle recipe tuning (e.g., fluid-to-ice ratios in *Iced Calamansi Lime Tea*) or pair high-volume items with high-margin side components to lower the collective food cost percentage without alienating consumer demand.
+3. **Weekly POS Analytics Integration:** Embed the engineered SQL analytical matrix directly into the Points of Sales (POS) terminals to execute real-time automated weekly classification sweeps, enabling proactive menu management.
+
+---
+
+## 📁 Repository Structure
+```text
+├── README.md                           <-- Executive Project Summary (This file)
+├── FB_Cost_Control_Mini_Thesis.pdf    <-- Full 20-Page Comprehensive Thesis Document
+├── scripts/
+│   └── waste_analysis_query.sql        <-- Production-Ready MySQL Initialization & Logic Script
+└── data/
+    └── FB_operations_cost_control.xlsx <-- Staging Data Sheets (Tab 1, Tab 2, Tab 3)
+```
+
+---
+*Developed as an independent portfolio piece showcasing advanced skills in Financial Cost Control, Database Engineering (SQL), and Prescriptive Data Analytics within the Hospitality Domain.*
+
